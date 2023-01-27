@@ -25,7 +25,7 @@ public class MovieRepository {
     }
 
     public String addMovieDirectorPair(String MovieName, String DirectorName){
-        if(!db1.containsKey(MovieName) || (!db1.containsKey(DirectorName))){
+        if(!db2.containsKey(MovieName) || !db3.containsKey(DirectorName)){
             return "Movie or Director not available";
         }
         List<String>movieList = db1.getOrDefault(DirectorName, new ArrayList<>());
